@@ -1,0 +1,291 @@
+:root{
+  --background-color:#e7e7e6;
+  --a-tag-color: #357b70;
+  --a-hover-focus-color: 	#800080;
+  --a-visited-color:#05676e;
+  --a-active: #489c79;
+  --button-bg-color: #1e90ff;
+  --button-bg-hover-focus-color: #87cefa;
+  --mybutton-bg-color: #c62d1f;
+  --mybutton-shadow-color: #8a2a21;
+  --mybutton-text-shadow: #810e05;
+  --mybutton-border-color: #d02718;
+  --mybutton-hover-bgcolor: #44c767;
+  --mybutton-hover-border:#18ab29;
+  --mybutton-hover-text-decoration-color: #1e90ff;
+  --mybutton-hover-text-shadow-color: #2f6627;
+  --sun-color-change-0: #edc655;
+  --sun-color-change-50: #fcffad;
+  --sun-color-change-100: #f76414;
+  --text-color: #000; 
+  --text-button-color: #fff;
+  --margin-body: 10px; 
+  --margin-pic: 0 auto;
+  --background-color-grid: beige;
+  --table-color: #c4dcf3; 
+  --table-head-color: #427fef; 
+  }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color:  var(--text-color);
+  font-family: 'Merriweather', serif; 
+  font-weight: 400;
+  margin-left: var(--margin-body);
+  margin-right: var(--margin-body);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+h1 {
+  text-decoration: underline;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+a {
+  color: var(--a-tag-color);
+  text-decoration: none;
+} 
+
+a:hover, a:focus {
+  text-decoration: underline;
+  color:  var(--a-hover-focus-color); 
+}
+
+a:visited {
+  color: var(--a-visited-color); 
+}
+
+a:active {
+  color: var(--a-active);
+}
+
+#logo {
+  border-radius: 25px;
+  margin: var(--margin-pic);
+}
+
+.profile {
+  max-width: 700px;
+  margin: var(--margin-pic);
+} 
+
+.profile_portrait {
+    float: left;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+#button{
+  background-color: var(--button-bg-color);
+  color:  var(--text-button-color);
+  padding: 5px;
+  border-radius: 25px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  font-family: inherit;
+}
+
+#button:hover, #button:focus{
+background-color: var(--button-bg-hover-focus-color);
+cursor: pointer;
+opacity: 0.8;
+}
+
+
+.page-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 20px;
+  border-bottom: 2px solid var(--text-button-color);
+  margin-bottom: 2rem;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+/* .navigation-list li {
+  display: inline-block;
+}
+"With the ul styling below, this styling for the navigation-list is no longer neccessary
+inline-block did not allow me to add a gap between links in the navbar"*/
+
+/*I added this ul here just to put a gap between the links in the navbar*/
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px;
+  align-items: center;
+}
+
+
+.footer {
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+.myButton {
+  width: 25%;
+  box-shadow: 3px 4px 0px 0px var(--mybutton-shadow-color);
+  background-color: var(--mybutton-bg-color);
+  border-radius:18px;
+  border:1px solid var(--mybutton-border-color);
+  display: inline-block;
+  margin: 0 auto;
+  cursor:pointer;
+  color: var(--text-button-color);
+  font-family:Arial;
+  font-size:17px;
+  padding:7px 25px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px var(--mybutton-text-shadow);
+  transition-property: all;
+  transition-delay: 0.5s;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  /* transition: all 1s ease-in-out 0.5s "Here is the short hand"*/
+}
+
+.myButton:hover {
+background-color:var(--mybutton-hover-bgcolor);
+border-radius:28px;
+border:1px solid var(--mybutton-hover-border);
+display:inline-block;
+cursor:pointer;
+color: var(--text-button-color);
+font-family:Arial;
+font-size:17px;
+padding:16px 31px;
+text-decoration: underline var(--mybutton-hover-text-decoration-color);
+text-shadow:0px 1px 0px var(--mybutton-hover-text-shadow-color);
+}
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes color-change {
+  0% {
+    fill: var(--sun-color-change-0);
+  }
+  50% {
+    fill: var(--sun-color-change-50);
+  }
+  100% {
+    fill: var(--sun-color-change-100);
+  }
+}
+
+  /*Here is the CSS for the grid */
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.grid_item {
+    background-color: var(--background-color-grid);
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-column: auto;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-column: auto;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+/*Here is the CSS for the table*/
+
+table {
+  width: 275px;
+  border-radius: 25px;
+  margin: 0 auto;
+}
+
+th {
+  text-align: left;
+  color: var(--text-button-color);
+}
+
+table, th, td {
+  border: 1px solid var(--table-color);
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+}
+
+caption {
+  font-weight: bold;
+}
+
+th {
+  background-color: var(--table-head-color);
+  border: none;
+}
+
+/*tr:nth-child(odd){
+  text-decoration-line: underline;
+}

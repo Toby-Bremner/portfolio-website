@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+  }
+
+table {
+    width: 275px;
+    border-radius: 25px;
+    margin: 0 auto;
+}
+
+th {
+    text-align: left;
+    color: white;
+}
+
+table, th, td {
+    border: 1px solid #c4dcf3;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+}
+
+caption {
+    font-weight: bold;
+}
+
+th {
+    background-color: #427fef;
+    border: none;
+}
+
+/*tr:nth-child(odd){
+    text-decoration-line: underline;
+}

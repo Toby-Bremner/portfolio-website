@@ -1,0 +1,350 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #e7e7e6;
+  color:  #000;
+  font-family: 'Merriweather', serif; 
+  font-weight: 400;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+h1 {
+  text-decoration: underline;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+a {
+  color: #357b70;
+  text-decoration: none;
+} 
+
+a:hover {
+  text-decoration: underline;
+  color:  #800080; 
+} 
+
+a:focus {
+  text-decoration: underline;
+  color:  #800080; 
+}
+
+a:visited {
+  color: #05676e; 
+}
+
+a:active {
+  color: #489c79;
+}
+
+#logo {
+  border-radius: 25px;
+  margin: 0 auto;
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+} 
+
+.profile_portrait {
+    float: left;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+#button{
+  background-color: #1e90ff;
+  color:  #fff;
+  padding: 5px;
+  border-radius: 25px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  font-family: inherit;
+}
+
+#button:hover{
+background-color: #87cefa;
+cursor: pointer;
+opacity: 0.8;
+}
+
+#button:focus{
+background-color: #87cefa;
+cursor: pointer;
+opacity: 0.8;
+}
+
+
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 20px;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 2rem;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+/* .navigation-list li {
+  display: inline-block;
+}
+"With the ul styling below, this styling for the navigation-list is no longer neccessary
+inline-block did not allow me to add a gap between links in the navbar"*/
+
+/*I added this ul here just to put a gap between the links in the navbar*/
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+
+.footer {
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+.myButton {
+  width: 25%;
+  -webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
+          box-shadow: 3px 4px 0px 0px #8a2a21;
+  background-color: #c62d1f;
+  border-radius:18px;
+  border:1px solid #d02718;
+  display: inline-block;
+  margin: 0 auto;
+  cursor:pointer;
+  color: #fff;
+  font-family:Arial;
+  font-size:17px;
+  padding:7px 25px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #810e05;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-delay: 0.5s;
+       -o-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  -webkit-transition-duration: 1s;
+       -o-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  /* transition: all 1s ease-in-out 0.5s "Here is the short hand"*/
+}
+
+.myButton:hover {
+background-color:#44c767;
+border-radius:28px;
+border:1px solid #18ab29;
+display:inline-block;
+cursor:pointer;
+color: #fff;
+font-family:Arial;
+font-size:17px;
+padding:16px 31px;
+-webkit-text-decoration: underline #1e90ff;
+        text-decoration: underline #1e90ff;
+text-shadow:0px 1px 0px #2f6627;
+}
+
+.sun {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-name: color-change;
+          animation-name: color-change;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+
+  /*Here is the CSS for the grid */
+
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.grid_item {
+    background-color: beige;
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-column: auto;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    -ms-grid-columns: 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column: auto;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+/*Here is the CSS for the table*/
+
+table {
+  width: 275px;
+  border-radius: 25px;
+  margin: 0 auto;
+}
+
+th {
+  text-align: left;
+  color: #fff;
+}
+
+table {
+  border: 1px solid #c4dcf3;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+th {
+  border: 1px solid #c4dcf3;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+td {
+  border: 1px solid #c4dcf3;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+}
+
+caption {
+  font-weight: bold;
+}
+
+th {
+  background-color: #427fef;
+  border: none;
+}
+
+/*tr:nth-child(odd){
+  text-decoration-line: underline;
+}*/
