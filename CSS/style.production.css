@@ -178,7 +178,8 @@ ul {
 }
 
 .myButton {
-  width: 25%;
+  width: 30%;
+  text-align: left;
   -webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
           box-shadow: 3px 4px 0px 0px #8a2a21;
   background-color: #c62d1f;
